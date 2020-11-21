@@ -16,10 +16,10 @@ class RequestViewSet(ModelViewSet):
     lookup_field = "slug"
     permission_classes = [IsAdminUser]
 
-    def get_queryset(self, *args, **kwargs):
-        if self.status == "ONGOING":
-            self.transporter = self.request.user
-            return self.transporter
+    # def get_queryset(self, *args, **kwargs):
+    #     if self.status == "ONGOING":
+    #         self.transporter = self.request.user
+    #         return self.transporter
 
     # @action(detail=True, methods=["GET"])
     # def me(self, request):
